@@ -1,0 +1,13 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: ClientPolicy
+metadata:
+  name: client-policy
+spec:
+  match:
+    kinds:
+      - apiGroups:
+          - ''
+        kinds:
+          - Pod
+          - Namespace
+    scope: '*'
