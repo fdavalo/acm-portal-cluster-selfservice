@@ -1,0 +1,30 @@
+ind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: infraenv
+rules:
+  - verbs:
+      - '*'
+    apiGroups:
+      - agent-install.openshift.io
+    resources:
+      - agents
+      - infraenvs
+  - verbs:
+      - '*'
+    apiGroups:
+      - ''
+    resources:
+      - secrets
+  - verbs:
+      - '*'
+    apiGroups:
+      - rbac.authorization.k8s.io
+    resources:
+      - roles
+  - verbs:
+      - '*'
+    apiGroups:
+       - extensions.hive.openshift.io
+    resources:
+       - agentclusterinstalls      
