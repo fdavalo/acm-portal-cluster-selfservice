@@ -1,0 +1,6 @@
+kind: User
+apiVersion: user.openshift.io/v1
+metadata:
+  name: team1user1
+identities:
+  - 'htpasswd:team1user1'
